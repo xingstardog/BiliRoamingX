@@ -10,10 +10,13 @@ plugins {
     alias(libs.plugins.lsplugin.apktransform)
     alias(libs.plugins.lsplugin.cmaker)
 }
+//原代码
+//Modified by Xingstar on 2025/08/28
+//val appVerCode = jgit.repo()?.commitCount("refs/remotes/origin/master") ?: 0
+//val appVerName: String by rootProject
 
-val appVerCode = jgit.repo()?.commitCount("refs/remotes/origin/master") ?: 0
-val appVerName: String by rootProject
-
+val appVerCode = 180
+val appVerName = "1.8.0X"
 apksign {
     storeFileProperty = "releaseStoreFile"
     storePasswordProperty = "releaseStorePassword"
